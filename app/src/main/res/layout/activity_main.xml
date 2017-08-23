@@ -34,6 +34,25 @@
             android:textColor="@color/text_font"
             android:gravity="center"/>
 
+        <TextView
+            android:id="@+id/tv_bitmap_movie"
+            android:padding="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BitMapMovieSurfaceView动画"
+            android:textSize="18sp"
+            android:textColor="@color/text_font"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_sine_curve"
+            android:padding="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="正弦曲线"
+            android:textSize="18sp"
+            android:textColor="@color/text_font"
+            android:gravity="center"/>
 
     </LinearLayout>
 

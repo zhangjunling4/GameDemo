@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.ViewDemoActivity" />
-        <activity android:name=".activity.SurfaceViewDemoActivity"></activity>
+        <activity android:name=".activity.SurfaceViewDemoActivity" />
+        <activity android:name=".activity.BitMapMovieActivity" />
+        <activity android:name=".activity.SineCurveActivity"></activity>
     </application>
 
 </manifest>
