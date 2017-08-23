@@ -1,10 +1,13 @@
 package com.seek.gamedemo;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.seek.gamedemo.activity.ViewDemoActivity;
 import com.seek.gamedemo.surface.BitmapMovieSurfaceView;
 import com.seek.gamedemo.surface.MySurfaceView;
 import com.seek.gamedemo.view.MyView;
@@ -20,8 +23,24 @@ public class MainActivity extends AppCompatActivity {
         //隐去状态栏部分(电池等图标和一些修饰部分)
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN
         , WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
+        setContentView(R.layout.activity_main);
         //设置显示View实例
-        setContentView(new BitmapMovieSurfaceView(this));
+//        setContentView(new BitmapMovieSurfaceView(this));
+
+        findViewById(R.id.tv_view).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ViewDemoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.tv_surfaceview).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ViewDemoActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
