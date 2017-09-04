@@ -21,7 +21,10 @@ import com.seek.gamedemo.R;
 
 public class BitmapMovieSurfaceView extends SurfaceView implements SurfaceHolder.Callback,Runnable {
     private Bitmap bmp;
+    private Bitmap bmpFish;
     private int bmpX, bmpY;
+
+    private int bmpFishX, bmpFishY;
 
     private int textX = 10, textY = 10;
     private Thread th;
@@ -58,8 +61,14 @@ public class BitmapMovieSurfaceView extends SurfaceView implements SurfaceHolder
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
         bmp = BitmapFactory.decodeResource(this.getResources(), R.drawable.water);
+        bmpFish = BitmapFactory.decodeResource(this.getResources(), R.drawable.fish);
+
         bmpX = -bmp.getWidth() + this.getWidth();
         bmpY = this.getHeight() - bmp.getHeight();
+
+        bmpFishX = this.getWidth();
+        bmpFishY = this.getHeight() - bmp.getHeight();
+
         screenW = this.getWidth();
         screenH = this.getHeight();
         flag = true;
@@ -86,6 +95,8 @@ public class BitmapMovieSurfaceView extends SurfaceView implements SurfaceHolder
             if (canvas != null){
                 canvas.drawColor(Color.WHITE);
                 canvas.drawBitmap(bmp, bmpX, bmpY, paint);
+
+                canvas.drawBitmap(bmpFish, bmpFishX, bmpFishY, paint);
                 canvas.drawBitmap(fishBmp[currentFrame], 0, 0, paint);
             }
         }catch (Exception e){
@@ -131,6 +142,8 @@ public class BitmapMovieSurfaceView extends SurfaceView implements SurfaceHolder
 
     private void logic() {
         bmpX += 5;
+
+        bmpFishX -= 5;
 
         currentFrame ++;
         if (currentFrame >= fishBmp.length){

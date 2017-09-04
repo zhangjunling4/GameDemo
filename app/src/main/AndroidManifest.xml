@@ -19,7 +19,9 @@
         <activity android:name=".activity.ViewDemoActivity" />
         <activity android:name=".activity.SurfaceViewDemoActivity" />
         <activity android:name=".activity.BitMapMovieActivity" />
-        <activity android:name=".activity.SineCurveActivity"></activity>
+        <activity android:name=".activity.SineCurveActivity" />
+        <activity android:name=".activity.MenuAnimationActivity" />
+        <activity android:name=".activity.ObjectAnimatorActivity"></activity>
     </application>
 
 </manifest>

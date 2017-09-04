@@ -8,6 +8,7 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.seek.gamedemo.activity.BitMapMovieActivity;
+import com.seek.gamedemo.activity.ObjectAnimatorActivity;
 import com.seek.gamedemo.activity.SineCurveActivity;
 import com.seek.gamedemo.activity.SurfaceViewDemoActivity;
 import com.seek.gamedemo.activity.ViewDemoActivity;
@@ -56,6 +57,22 @@ public class MainActivity extends AppCompatActivity {
         });
 
         findViewById(R.id.tv_sine_curve).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), SineCurveActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.object_animation).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ObjectAnimatorActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.menu_animation).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), SineCurveActivity.class);
